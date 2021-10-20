@@ -98,8 +98,8 @@ def cont():
 	global bg
 	global sm
 	global i
-	bg=int(input("Введите больший параметр bg- "))
-	sm=int(input("Введите меньший параметр sm- "))
+	bg=int(input("Введите меньший параметр bg- "))
+	sm=int(input("Введите больший параметр sm- "))
 	i=("[Параметры установлены со значениями sm="+str(sm)+" bg="+str(bg)+"]")
 	main()
 
