@@ -1,5 +1,7 @@
 import time
 import os
+import sys
+sys.setrecursionlimit(999999999)
 
 
 try:
