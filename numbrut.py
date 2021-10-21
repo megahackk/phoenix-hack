@@ -53,7 +53,7 @@ def  bgi():
 	global bgh
 	try:
 		bgh=stan(bg)
-		time.sleep(10)
+		time.sleep(9)
 		send(bgh)
 	except:
 		print("Капча на цикл возрастания-[Ждем 3 минуты...]")
@@ -68,7 +68,7 @@ def  bgi():
 def smi():
 	global sm
 	try:
-		time.sleep(10)
+		time.sleep(9)
 		send(sm)
 	except:
 		print("Капча на цикл убывания-[Ждем 3 минуты...]")
@@ -132,7 +132,5 @@ def main():
 	else:
 		print("[Неверный ввод]")
 		main()
-		
-
 main()
 
