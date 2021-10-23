@@ -3,7 +3,6 @@ import os
 import sys
 sys.setrecursionlimit(999999999)
 
-
 try:
 	import vk_api
 except:
@@ -13,6 +12,7 @@ except:
 else:
 	i="[Модуль уже установлен]"
 
+errnos_code=0
 
 bg=0
 sm=99999
@@ -53,32 +53,46 @@ def send(text):
 def  bgi():
 	global bg
 	global bgh
+	global errnos_code
 	try:
 		bgh=stan(bg)
 		time.sleep(9)
 		send(bgh)
 	except:
-		print("Капча на цикл возрастания-[Ждем 3 минуты...]")
-		time.sleep(180)
-		bgi()
+		if errnos_code==0:
+			print("Капча (в)-[Ждем...]")
+			time.sleep(360)
+			bgi()
+			errnos_code=1
+		elif errnos_code==1:
+			time.sleep(360)
+			bgi()
 	else:
 		bg=bg+1
 		bgh=stan(bg)
 		smi()
+		errnos_code=0
 
 
 def smi():
+	global errnos_code
 	global sm
 	try:
 		time.sleep(9)
 		send(sm)
 	except:
-		print("Капча на цикл убывания-[Ждем 3 минуты...]")
-		time.sleep(180)
-		smi()
+		if errnos_code==0:
+			print("Капча (y)-[Ждем...]")
+			time.sleep(360)
+			smi()
+			errnos_code=1
+		elif errnos_code==1:
+			time.sleep(360)
+			smi()
 	else:
 		sm=sm-1
 		bgi()
+		errnos_code=0
 
 
 
@@ -109,7 +123,7 @@ def cont():
 def main():
 	global i
 	os.system('cls' if os.name=='nt' else 'clear')
-	print("Version-1")
+	print("Version-1.1")
 	print("")
 	print(i)
 	print('')
@@ -135,4 +149,3 @@ def main():
 		print("[Неверный ввод]")
 		main()
 main()
-
