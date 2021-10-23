@@ -56,7 +56,7 @@ def  bgi():
 	global errnos_code
 	try:
 		bgh=stan(bg)
-		time.sleep(9)
+		time.sleep(5)
 		send(bgh)
 	except:
 		if errnos_code==0:
@@ -78,7 +78,7 @@ def smi():
 	global errnos_code
 	global sm
 	try:
-		time.sleep(9)
+		time.sleep(5)
 		send(sm)
 	except:
 		if errnos_code==0:
