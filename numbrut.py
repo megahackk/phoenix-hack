@@ -70,8 +70,9 @@ def  bgi():
 	else:
 		bg=bg+1
 		bgh=stan(bg)
-		smi()
 		errnos_code=0
+		smi()
+		
 
 
 def smi():
@@ -91,8 +92,8 @@ def smi():
 			smi()
 	else:
 		sm=sm-1
-		bgi()
 		errnos_code=0
+		bgi()
 
 
 
@@ -149,3 +150,4 @@ def main():
 		print("[Неверный ввод]")
 		main()
 main()
+
