@@ -61,11 +61,11 @@ def  bgi():
 	except:
 		if errnos_code==0:
 			print("Капча (в)-[Ждем...]")
-			time.sleep(360)
-			bgi()
+			time.sleep(20)
 			errnos_code=1
+			bgi()
 		elif errnos_code==1:
-			time.sleep(360)
+			time.sleep(40)
 			bgi()
 	else:
 		bg=bg+1
@@ -83,11 +83,11 @@ def smi():
 	except:
 		if errnos_code==0:
 			print("Капча (y)-[Ждем...]")
-			time.sleep(360)
-			smi()
+			time.sleep(20)
 			errnos_code=1
+			smi()
 		elif errnos_code==1:
-			time.sleep(360)
+			time.sleep(40)
 			smi()
 	else:
 		sm=sm-1
